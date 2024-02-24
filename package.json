@@ -7,22 +7,19 @@
     "start": "node dist/hybrid-socket/src/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "postbuild": "npm run apidoc",
-    "lint": "eslint --fix src test",
-    "test": "jest --detectOpenHandles --forceExit",
-    "apidoc": "apidoc -c apidoc.json -o public/"
+    "lint": "eslint --fix src test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ilkkamtk/hybrid-upload-server.git"
+    "url": "git+https://github.com/ilkkamtk/hybrid-socket.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ilkkamtk/hybrid-upload-server/issues"
+    "url": "https://github.com/ilkkamtk/hybrid-socket/issues"
   },
-  "homepage": "https://github.com/ilkkamtk/hybrid-upload-server#readme",
+  "homepage": "https://github.com/ilkkamtk/hybrid-socket#readme",
   "dependencies": {
     "dotenv": "^16.3.2",
     "mysql2": "^3.9.1",
