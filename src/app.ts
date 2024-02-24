@@ -36,7 +36,7 @@ setInterval(async () => {
     'SELECT COUNT(*) as count FROM MediaItems',
   );
   const currentRowCount = rows[0].count;
-  console.log('interval', currentRowCount, lastRowCount);
+  // console.log('interval', currentRowCount, lastRowCount);
   if (currentRowCount !== lastRowCount) {
     io.emit('addMedia', 'media added or deleted'); // Emit to all connected sockets
     lastRowCount = currentRowCount;
