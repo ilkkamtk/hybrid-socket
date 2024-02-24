@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
@@ -11,8 +12,6 @@ import {ClientToServerEvents, ServerToClientEvents} from './types/LocalTypes';
 import promisePool from './lib/db';
 import {MediaItem} from '@sharedTypes/DBTypes';
 import {RowDataPacket} from 'mysql2';
-
-require('dotenv').config();
 
 const app = express();
 
