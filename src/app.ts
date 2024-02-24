@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
   });
 });
 
-io.on('connection_error', (err) => {
+io.engine.on('connection_error', (err) => {
   console.log('req', err.req); // the request object
   console.log('code', err.code); // the error code, for example 1
   console.log('message', err.message); // the error message, for example "Session ID unknown"
@@ -62,6 +62,10 @@ app.get<{}, MessageResponse>('/', (req, res) => {
   });
 });
 
+app.use((req, res, next) => {
+  console.log(res.statusCode);
+  next();
+});
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
