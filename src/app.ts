@@ -26,7 +26,7 @@ const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
   cors: {
     origin: '*',
   },
-  transports: ['websocket'],
+  path: '/socket/',
 });
 
 let lastRowCount = 0;
