@@ -1,10 +1,10 @@
 {
-  "name": "hybrid-socket-server",
+  "name": "hybrid-socket",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "node dist/hybrid-socket-server/src/index.js",
+    "start": "node dist/hybrid-socket/src/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "postbuild": "npm run apidoc",
