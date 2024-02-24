@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
   });
 });
 
-io.engine.on('connection_error', (err) => {
+io.on('connection_error', (err) => {
   console.log('req', err.req); // the request object
   console.log('code', err.code); // the error code, for example 1
   console.log('message', err.message); // the error message, for example "Session ID unknown"
