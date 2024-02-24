@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 const httpServer = createServer(app);
-
+// add cors options to io
 const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
   cors: {
     origin: '*',
